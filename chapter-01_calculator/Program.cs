@@ -58,3 +58,4 @@ else
 }
 
 // Step 4 - output result
+    Console.WriteLine($"{num1} {operat} {num2} = {result}");
