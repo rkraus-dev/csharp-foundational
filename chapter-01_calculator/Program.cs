@@ -14,6 +14,10 @@ if(!decimal.TryParse(Console.ReadLine(), out decimal num2))
 }
 
 // Step 2 - ask user for operator
+// 2. Den Nutzer nach einem Operator fragen: +, -, *, /, %
+Console.Write("Enter operator (+, -, *, /, %): "); 
+string operat = Console.ReadLine() ?? "";
+
 
 // Step 3 - check if division by zero
 
