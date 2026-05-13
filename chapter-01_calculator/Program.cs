@@ -13,10 +13,10 @@ if(!decimal.TryParse(Console.ReadLine(), out decimal num2))
     return;
 }
 
-
 // Step 2 - ask user for operator
 Console.Write("Enter operator (+, -, *, /, %): "); 
 string operat = Console.ReadLine() ?? "";
+
 
 // Step 3 - perform calculation (check if division by zero)
 decimal result = 0m;
@@ -55,6 +55,7 @@ else if(operat == "%")
 else
 {
     Console.WriteLine("Invalid Operator!");
+    return;
 }
 
 // Step 4 - output result
