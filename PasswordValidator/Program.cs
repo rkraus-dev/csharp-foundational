@@ -38,5 +38,41 @@ if(password == null || password == "")
     Console.WriteLine("- Password cannot be null or empty");
     return;
 }
- // Hier Passwortprüfung
 
+ // Check minimum length
+ if(password.Length >= 8)
+ {
+    hasMinLength = true;
+ }
+
+// Check Uppercase, Lowercase, hasDigit
+foreach(char c in password)
+{
+    if (char.IsUpper(c))
+        hasUpperCase = true;
+    if(char.IsLower(c))
+        hasLowerCase = true;
+    if(char.IsDigit(c))
+        hasDigit = true;
+}
+
+// Output - if password is valid
+if(hasMinLength && hasUpperCase && hasLowerCase && hasDigit)
+{
+    Console.WriteLine("Password is valid!");
+    return;
+}
+    
+
+// Output - if passwort is invalid
+Console.WriteLine("Password is invalid!");
+
+// Output - why its invalid
+if(!hasMinLength)
+    Console.WriteLine("- Must be at least 8 characters");
+if(!hasUpperCase)
+    Console.WriteLine("- Must contain an uppercase letter");
+if(!hasLowerCase)
+    Console.WriteLine("- Must contain an lowercase letter");
+if(!hasDigit)
+    Console.WriteLine("- Must contain a digit");
